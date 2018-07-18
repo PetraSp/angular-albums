@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ItunesService } from './services/itunes.service';
 
 import { AppComponent } from './app.component';
 import { AlbumsPageComponent } from './pages/albums-page/albums-page.component';
@@ -19,7 +20,9 @@ const routes: Routes = [
     BrowserModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [
+    ItunesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
