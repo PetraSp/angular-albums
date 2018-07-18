@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ItunesService } from '../../services/itunes.service'
 
 @Component({
   selector: 'app-albums-page',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlbumsPageComponent implements OnInit {
 
-  constructor() { }
+  albums: Object;
+
+  constructor(private itunesService: ItunesService) { }
 
   ngOnInit() {
+    this.albums = this.getAlbums();
+  }
+
+  getAlbums(): Object {
+    return this.itunesService.getAlbums();
   }
 
 }
