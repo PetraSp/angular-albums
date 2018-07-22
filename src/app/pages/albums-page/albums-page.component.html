@@ -1,1 +1,2 @@
-<app-album-list [albums] = "albums.results"></app-album-list>
+<p *ngIf="!albums">Loading...</p>
+<app-album-list *ngIf="albums" [myAlbums]="albums.results"></app-album-list>

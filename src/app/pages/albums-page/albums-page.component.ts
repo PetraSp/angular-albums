@@ -13,11 +13,12 @@ export class AlbumsPageComponent implements OnInit {
   constructor(private itunesService: ItunesService) { }
 
   ngOnInit() {
-    this.albums = this.getAlbums();
+    this.initAlbums();
   }
 
-  getAlbums(): Object {
-    return this.itunesService.getAlbums();
+  initAlbums() {
+    this.itunesService.getAlbums().subscribe(albums => {
+      this.albums = albums;
+    });
   }
-
 }

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import 'rxjs/add/operator/toPromise';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -11,8 +11,7 @@ export class ItunesService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getAlbums(): Object {
+  getAlbums(): Observable <any> {
     return this.httpClient.get(`${this.baseurl}/albums`)
-      .toPromise();
   }
 }

@@ -8,7 +8,7 @@ import { Input } from '@angular/core';
 })
 export class AlbumListComponent implements OnInit {
 
-  @Input() albums: Array<Object>;
+  @Input() myAlbums: Array<Object>;
   
   constructor() { }
 
