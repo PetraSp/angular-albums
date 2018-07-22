@@ -1,3 +1,6 @@
 <div *ngFor="let song of album">
-  <p *ngIf="song.trackName">{{song.trackName}}</p>
+  <div *ngIf="song.trackName">
+    <p>{{song.trackName}}</p>
+    <p>{{song.trackTimeMillis / 1000 | number: '1.0-0'}} s</p>
+  </div>
 </div>
