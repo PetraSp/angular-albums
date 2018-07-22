@@ -14,4 +14,8 @@ export class ItunesService {
   getAlbums(): Observable <any> {
     return this.httpClient.get(`${this.baseurl}/albums`)
   }
+
+  getAlbumById(id: String): Observable <any> {
+    return this.httpClient.get(`${this.baseurl}/albums/${id}`);
+  }
 }
