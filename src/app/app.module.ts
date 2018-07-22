@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 
@@ -16,6 +17,7 @@ import { AlbumItemComponent } from './components/album-item/album-item.component
 import { ItunesService } from './services/itunes.service';
 import { DetailsPageComponent } from './pages/details-page/details-page.component';
 import { AlbumDetailsComponent } from './components/album-details/album-details.component';
+import { TrackFormComponent } from './components/track-form/track-form.component';
 
 const routes: Routes = [ 
   { path: '', redirectTo: '/albums', pathMatch: 'full' },
@@ -30,12 +32,14 @@ const routes: Routes = [
     AlbumListComponent,
     AlbumItemComponent,
     DetailsPageComponent,
-    AlbumDetailsComponent
+    AlbumDetailsComponent,
+    TrackFormComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     ItunesService
