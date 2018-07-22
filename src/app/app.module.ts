@@ -18,7 +18,8 @@ import { DetailsPageComponent } from './pages/details-page/details-page.componen
 
 const routes: Routes = [ 
   { path: '', redirectTo: '/albums', pathMatch: 'full' },
-  { path: 'albums', component: AlbumsPageComponent }
+  { path: 'albums', component: AlbumsPageComponent },
+  { path: 'albums/:id', component: DetailsPageComponent }
 ];
 
 @NgModule({
