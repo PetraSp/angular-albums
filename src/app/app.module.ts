@@ -15,6 +15,7 @@ import { AlbumItemComponent } from './components/album-item/album-item.component
 // Services
 import { ItunesService } from './services/itunes.service';
 import { DetailsPageComponent } from './pages/details-page/details-page.component';
+import { AlbumDetailsComponent } from './components/album-details/album-details.component';
 
 const routes: Routes = [ 
   { path: '', redirectTo: '/albums', pathMatch: 'full' },
@@ -28,7 +29,8 @@ const routes: Routes = [
     AlbumsPageComponent,
     AlbumListComponent,
     AlbumItemComponent,
-    DetailsPageComponent
+    DetailsPageComponent,
+    AlbumDetailsComponent
   ],
   imports: [
     BrowserModule,
