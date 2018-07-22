@@ -10,8 +10,9 @@ export class AlbumDetailsComponent implements OnInit {
 
   @Input() album: Object;
 
-   constructor() { }
+  constructor() { }
 
   ngOnInit() {
   }
+
 }
