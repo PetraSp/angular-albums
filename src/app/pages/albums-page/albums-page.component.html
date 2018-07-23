@@ -1,2 +1,5 @@
+<div class="title">
+  <h1>Music Albums</h1>
+</div>
 <p *ngIf="!albums">Loading...</p>
 <app-album-list *ngIf="albums" [myAlbums]="albums.results"></app-album-list>

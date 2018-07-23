@@ -1,15 +1,16 @@
-<p>
-  <a [routerLink]="['/albums', album.collectionId]">{{album.collectionName}}</a> 
-</p>
-
-<p>
-  {{album.artistName}}
-</p>
-
-<p>
-  <img [src]="album.artworkUrl60">
-</p>
-
-<p>
-  {{album.trackCount}}
-</p>
+<div class="container">
+  <div class="album-img">
+      <img [src]="album.artworkUrl60">
+  </div>
+ <div class="album-info">    
+  <p>
+    <a [routerLink]="['/albums', album.collectionId]">{{album.collectionName}}</a> 
+  </p>
+  <p>
+    {{album.artistName}}
+  </p> 
+  <p>
+    Number of tracks: {{album.trackCount}}
+  </p> 
+</div> 
+</div>

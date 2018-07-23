@@ -1,8 +1,15 @@
-<div *ngFor="let song of album">
-  <div *ngIf="song.trackName">
-    <p>{{song.trackName}}</p>
-    <p>{{song.trackTimeMillis / 1000 | number: '1.0-0'}} s</p>
-  </div>
+<div class="plwrap">
+  <ul class="plList" *ngFor="let song of album; let i = index">
+    <ng-container *ngIf="song.trackName">
+    <li >
+      <div class="plItem">
+        <div class="plNum">{{i}}</div>
+        <div class="plTitle">{{song.trackName}}</div>
+        <div class="plLength">{{song.trackTimeMillis / 1000 | number: '1.0-0'}} s</div>
+      </div>
+    </li>
+    </ng-container>
+  </ul>
 </div>
 
 <app-track-form></app-track-form>
